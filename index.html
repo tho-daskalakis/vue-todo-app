@@ -5,11 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue to-do app</title>
+
+    <link rel="stylesheet" href="https://ez-css.now.sh" />
   </head>
   <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <main id="app">
       <h1>{{title}}</h1>
+
+      <form @submit.prevent="addTodo">
+        <label for="newTodo">New Todo</label>
+        <input v-model="todoText" type="text" name="newTodo" id="newTodo" />
+        <button>Add</button>
+      </form>
     </main>
     <script src="app.js"></script>
   </body>
